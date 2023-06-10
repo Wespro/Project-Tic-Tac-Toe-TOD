@@ -8,18 +8,45 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header><h1>Play a Tic Tac Toe game?</h1></header>
+    <div class="gameRoundOver winnerOut">
+      <h2 class="gameRound"></h2>
+      <h1 class="winner"></h1>
+    </div>
+    <div class="screen dimOff"></div>
+    <header>
+      <h1>Play a Tic Tac Toe game?</h1>
+    </header>
     <main>
+      <div class="conrols">
+        <!-- <button id="ai">VS AI</button> -->
+        <button id="start">Start</button>
+        <div class="result">
+          <div class="headers">
+            <span class="player1">Player1</span>
+            <span class="rounds">5 Rounds</span>
+            <span class="player2">Player2</span>
+          </div>
+
+          <div class="score">
+            <span class="player1Score">0</span>
+            <span>:</span>
+            <span class="player2Score">0</span>
+          </div>
+        </div>
+
+        <button id="restart">Restart a new game</button>
+      </div>
+
       <div class="board">
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
+        <div data-key="0" class="square squareOff"></div>
+        <div data-key="1" class="square squareOff"></div>
+        <div data-key="2" class="square squareOff"></div>
+        <div data-key="3" class="square squareOff"></div>
+        <div data-key="4" class="square squareOff"></div>
+        <div data-key="5" class="square squareOff"></div>
+        <div data-key="6" class="square squareOff"></div>
+        <div data-key="7" class="square squareOff"></div>
+        <div data-key="8" class="square squareOff"></div>
       </div>
     </main>
     <footer>
@@ -29,3 +56,9 @@
     <script src="./app.js"></script>
   </body>
 </html>
+<!-- if (aiBtnPressed === true) { if (squareCell.innerText) {
+player1.aiWinPattern(e); } else { if (e.target.innerText) { return; } else {
+e.target.innerText = "X"; lastPlay = "X"; player1.AddSquare(e.target); } if
+(squareCell === e.target) { player1.aiWinPattern(e); } else {
+player1.aiWinPattern(e) squareCell.innerText = "O"; lastPlay = "O";
+player2.AddSquare(squareCell) } } -->

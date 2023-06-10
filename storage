@@ -1,0 +1,16 @@
+const boardIsEmpty = () => {
+  //change squares nodlist to array to use evry
+  let squaresArr = Array.from(squares);
+  // if( return squaresArr.every((ele) => {
+  //   return !ele.innerText;
+  // });)
+  if (
+    squaresArr.every((ele) => {
+      return !ele.innerText;
+    })
+  ) {
+    return;
+  } else {
+    gameBoardIsEmpty = false;
+  }
+};
